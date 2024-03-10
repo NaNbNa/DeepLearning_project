@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/all.min.css">
+    <link rel="stylesheet" href="../static/layui/layui/css/layui.css">
+    <title>LSTM</title>
+</head>
+<body>
+<div class="container main">
+    <div class="row">
+        <div class="learn-col-md2">
+              <div class="left-column site-fix">
+                  <div class="tab" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                      <i class="fa">::</i>
+                      <span>LSTM-项目</span>
+                  </div>
+                  <div class="sidebar-box gallery-list">
+                      <div class="design" id="left-column">
+                          <a target="_top" title="LSTM-introduce" href="/" >LSTM-introduce</a>
+                          <a target="_top" title="LSTM-build" href="/build" >LSTM-build</a>
+                          <a target="_top" title="LSTM-test" href="/test">LSTM-test</a>
+                          <a target="_top" title="LSTM-use" href="/use" style="background-color: rgb(0, 0, 525);font-weight: bold;color: rgb(255, 255, 255);">LSTM-use</a>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+            <div class="col middle-column">
+                      <div class="article-body">
+                          <div  class="blank"></div>
+                          <hr>
+                          <h1>lstm-model-use</h1>
+                          <pre class="prettyprint">
+                              <span class="pln">1.根据csv数据的格式增加参数，即可得到预测值</span>
+                              <span class="pln">2.csv有效列数：csv数据中用于训练的数据列</span>
+                              <span class="pln">3.格式：csv第一列有效数据填写在第一行参数框，第二列填写在第二行参数框</span>
+                              <hr>
+                              <span class="pln">1.功能：动态添加填写框</span>
+                              <span class="pln">2.备注：仅适用于单步预测，即n_step_in=1</span>
+                              <span class="pln">3.n_step_in=1，训练用参数个数即csv有效列数</span>
+                          </pre>
+                          <hr>
+                          <!-- 表单 -->
+                            <form class="layui-form" id="myForm" action="/use" method="post">
+                                <!-- 输入框容器开始端 -->
+                            <div id="inputContainer">
+                              <div class="layui-form-item">
+                                  <!-- 输入框 -->
+                                <div class="layui-input-inline">
+                                  <input type="text" name="input_0" placeholder="param_0"  class="layui-input">
+                                </div>
+                                  <!-- 删除按钮 -->
+                                <div class="layui-input-inline">
+                                  <button class="layui-btn layui-btn-primary layui-btn-danger deleteInput" type="button">delete</button>
+                                </div>
+                              </div>
+                            </div>
+                                <!-- 输入框容器结束端 -->
+                              <div class="layui-form-item">
+                                <div class="layui-input-block">
+                                    <!-- 添加按钮 -->
+                                  <button class="layui-btn layui-btn-primary layui-btn-danger" type="button" id="addInput">add Input</button>
+                                  <button class="layui-btn layui-btn-primary layui-btn-normal " lay-submit lay-filter="submitForm" id="subBtn">submit</button>
+                                </div>
+                              </div>
+                            </form>
+                          <!-- 预测开始 -->
+                            <div id="prediction"></div>
+                          <!-- 预测值的容器 -->
+                          <div id="dictionary"></div>
+                      </div>
+            </div>
+    </div>
+</div>
+</body>
+<script src="../static/js/jquery-3.5.1.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/custom.js"></script>
+<script src="../static/js/socket.io.js"></script>
+<script src="../static/layui/layui/layui.js"></script>
+</html>

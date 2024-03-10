@@ -1,0 +1,146 @@
+@media screen and (max-width: 768px){
+  body{
+    width: 100% !important;
+  }
+  .foot p:first-child{
+    font-size: 14px !important;
+  }
+}
+
+@media screen and (min-width: 768px){
+  body{
+    width: 80% !important;
+    margin: 0 auto;
+  }
+}
+
+.title h2{
+  margin-bottom: 20px;
+  color: #4aa593;
+  text-shadow:0px 0px 2px #7defd8;
+}
+
+.key{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.key input:focus {
+  border-color: #1ab394;
+}  
+    
+.answer{
+  width: 100%;
+  position: relative;
+  height: 70vh;
+}
+
+.answer .tips{
+  display: block;
+}
+
+.answer .tips h3{
+  color:red;
+}
+
+.answer .tips img{
+  margin-top: 30px;
+  border:1px solid #7eecd6;
+  box-shadow: 0px 1px 10px 0px #7defd8;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.answer .ipt{
+  /* flex布局 */
+  display:flex;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  margin: 0 15px;
+  padding-right: 15px;
+  border-radius: 10px;
+  width: calc(100% - 30px);
+  height: 50px;
+  border: 1px solid #e7eaec;
+  box-shadow: 0px 0px 10px 0px rgba(154, 152, 152, 0.2);
+}
+
+/* 将textarea边框取消掉，然后focus伪类将边框效果也取消掉，
+   外边再套一个div边框将textarea文本框和按钮套在里面 */
+.answer .ipt textarea {
+  resize: none;
+  overflow-y: auto;
+  border: none;
+  box-shadow:none;
+}
+.answer .ipt textarea:focus{
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.answer #chatWindow {
+  max-height: calc(70vh - 100px);
+  height:auto;
+  overflow-y: auto;
+}
+/*
+   头像和文字采用的就是flex布局
+   并且文字和图片顶部对齐，防止文字较多依旧和图片中间对齐的bug
+*/
+.answer #chatWindow .message-bubble {
+  padding: 10px;
+  margin: 5px;
+  /*
+  align-items:flex-start的作用就是让文字与图片顶部对齐
+  */
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px dashed #e7eaec;
+}
+.answer #chatWindow .message-bubble1{
+  padding: 10px;
+  margin: 5px;
+  /*
+  align-items:flex-start的作用就是让文字与图片顶部对齐
+  */
+  display: flex;
+  align-items: flex-start;
+  /* row-reverse：主轴为水平方向，起点在右端 */
+  flex-direction: row-reverse;
+  border-bottom: 1px dashed #e7eaec;
+}
+
+.answer #chatWindow .message-bubble .message-text{
+  font-size: 18px;
+  margin-left:15px;
+  white-space: pre-wrap;
+}
+
+.answer #chatWindow .message-bubble1 .message-text{
+  font-size: 18px;
+  margin-left:15px;
+  white-space: pre-wrap;
+}
+
+.answer .chat-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+}
+/* 按钮 */
+.answer #chatBtn{
+  background-color: #1ab394;
+  border-color: #1ab394;
+}
+
+.foot p:first-child{
+  margin-bottom: 10px;
+}
+
+.foot p:nth-child(2){
+  margin-bottom: 0;
+}

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/static/img/small.jpg" type="image/x-icon">
+    <link charset="utf-8" rel="stylesheet" href="https://a.alipayobjects.com/g/serviceCenter/robot-pc/0.6.0/app.css" media="all">
+    <base target="_blank">
+    <meta name="data-aspm" content="a86">
+    <title>智能问答机器人</title>
+    <!-- jQuery -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body data-aspm="b15781">
+<div class="wrap-cont">
+    <div class="wrapper">
+        <div class="header J-header">
+            <div class="header-box" data-widget-cid="widget-5">
+                <div class="header-left">
+                    <img class="icon J-icon" src="/static/img/robot.jpg" alt="">
+                    <div class="username J-username">智能问答机器人</div>
+                    <div class="state J-state hide">正在输入中...</div>
+                </div>
+            <div class="header-right">
+                <a href="" class="suggest J-goto">建议反馈</a>
+                <span data-link="" class="back J-close-window-trigger">退出</span>
+            </div>
+
+        </div></div>
+        <div id="main" class="main">
+            <div class="notice-wrapper J-notice-wrapper"></div>
+
+            <!-- message wrapper begin -->
+            <div class="output-wrapper J-output-wrapper" id="msgStart">
+                <div data-widget-cid="widget-1"></div>
+                <div class="service-message J-message-wraper">
+                <div class="aside aside-noimg">
+                    <span class="time" id="time1">20:18:43</span>
+                </div>
+                <div>
+                    <div class="out-content">
+                        <div class="service-tail iconfont icon-chat-left-bottom-white"></div>
+                        <div class="service-card J-service-card">
+                            <div class="card-body">
+                                Hi，请问有什么可以帮你？<br>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <div class="service-message J-message-wraper">
+                    <div class="aside aside-noimg">
+                        <span class="time" id="time2"></span>
+                    </div>
+                    <div>
+                        <div class="out-content">
+                            <div class="service-tail iconfont icon-chat-left-bottom-white"></div>
+{#                            <div class="service-card J-service-card">#}
+{#                                <div class="card-header card-header-blue ">#}
+{##}
+{#                                    <span class="title">问题分类：</span>#}
+{#                                </div>#}
+{#                                <div class="card-footer">#}
+{#                                    <h4></h4>#}
+{#                                    <ul class="J-lists-wrap" data-aspm="c38850">#}
+{#                                        <li onclick='mayask(this)'>#}
+{#                                            <p></p>#}
+{#                                            <small></small>#}
+{#                                        </li>#}
+{#                                        <li onclick="mayask(this)">#}
+{#                                            <p></p>#}
+{#                                            <small></small>#}
+{#                                        </li>#}
+{#                                        <li onclick="mayask(this)">#}
+{#                                            <p></p>#}
+{#                                            <small></small>#}
+{#                                        </li>#}
+{#                                       <li onclick="mayask(this)">#}
+{#                                            <p></p>#}
+{#                                            <small></small>#}
+{#                                        </li>#}
+{#                                       <li onclick="mayask(this)">#}
+{#                                            <p></p>#}
+{#                                            <small></small>#}
+{#                                        </li>#}
+{#                                    </ul>#}
+{#                                </div>#}
+{#                            </div>#}
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!-- message wrapper end -->
+
+            <!-- input begin -->
+            <div class="input-wrapper J-input-wrapper">
+                <div class="skill-select J-skill-select"></div>
+                <!-- tools begin-->
+                <div class="input-tools J-input-tools"></div>
+                <!-- tools end-->
+
+                <div class="input-form J-input-form"><div class="ui-newSelect" data-widget-cid="widget-1" style="z-index: 99; display: none; position: absolute; left: -9999px; top: -9999px;">
+                    <div class="ui-newSelect-content">
+                        <ul data-role="items">
+                        </ul>
+                    </div>
+                </div>
+                <div class="wrap-textInput J-wrap-textInput" data-widget-cid="widget-3">
+
+
+
+                <input type="text" id="question" placeholder="请输入与党建相关的问题" style="width: 560px; height: 100px;">
+                <button type="submit" style="width: 100px; height: 100px;" onclick="gulugulu(document.getElementById('question').value);guluanswer();">发送
+{#              实现通过enter键提交问题 #}
+                <script>
+                document.getElementById("question").setAttribute("onKeyDown","keyDetection(event)");
+                function keyDetection(event){
+                    if(event.keyCode==13){
+                        gulugulu(document.getElementById('question').value);
+                        guluanswer();
+                    }
+
+                }
+                </script>
+
+
+                </div>
+                </div></div>
+
+
+
+            <!-- input end -->
+            <div class="J-dialog"></div>
+            <!-- sidebar begin -->
+            <div class="sidebar J-sidebar"><div class="sidebar-qr-code" data-widget-cid="widget-4">
+                <img alt="北方民族大学校徽" src="http://pic.gerenjianli.com/xiaohui2046/b523.jpg">
+            </div>
+                <div class="knowledge-point-box" data-widget-cid="widget-4">
+                    <hr class="line-box">
+                    <div class="head-line">自助工具</div>
+                    <ul class="knowledge-list">
+                        <li>
+                            <a href="" class="J-clickRate">
+                                <img class="list-icon" src="https://zos.alipayobjects.com/rmsportal/NUhxkHgSRLdzQTXgoRAC.png" alt="">
+                                <div class="list-message">进度中心</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="J-clickRate">
+                                <img class="list-icon" src="https://zos.alipayobjects.com/rmsportal/jotKjpfEKnvNTEUQxggA.png" alt="">
+                                <div class="list-message">查看入党流程</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="J-clickRate">
+                                <img class="list-icon" src="https://zos.alipayobjects.com/rmsportal/IYHuuLpjhDHhWQmxAdat.png" alt="">
+                                <div class="list-message">违纪处分</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="J-clickRate">
+                                <img class="list-icon" src="https://zos.alipayobjects.com/rmsportal/WyFKOKLAmxAkameihgDC.png" alt="">
+                                <div class="list-message">我的申请书</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img class="list-icon" src="https://zos.alipayobjects.com/rmsportal/VhiCUoikeOdTqHzhhtfL.png" alt="">
+                                <div class="list-message">更换登录邮箱</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img class="list-icon" src="https://zos.alipayobjects.com/rmsportal/TrGTojGpEdsSGvybgWMV.png" alt="">
+                                <div class="list-message">更多</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div></div>
+            <!-- sidebar end -->
+            <div data-widget-cid="widget-2"></div></div>
+
+    </div>
+</div>
+<div id="page-loading-mask" style="display: none;"></div>
+<div class="iframe" style="width: 0;height: 0;overflow: hidden;font-size: 0;position: relative;">
+    <iframe name="upload-image-iframe" class="J-upload-image-iframe" width="0" height="0" scrolling="no" frameborder="no"></iframe>
+</div>
+
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+ <script>
+        $.ajaxSetup({
+            data:{csrfmiddlewaretoken:'{{ csrf_token }}'}
+        })
+ </script>
+<script>
+    function beginImg(imgcontent) {
+        var time=new Date();
+        var hour=time.getHours();
+        var minu=time.getMinutes();
+        var secend = time.getSeconds();
+        var timeString =hour+":"+minu+":"+secend;
+        var imgdata = imgcontent.innerHTML;
+        $.ajax({
+            url: '/type_search/',
+            type: "POST",
+            data: {type_search: imgdata},
+            success: function (data) {
+                data = JSON.parse(data);
+                var marks = new Array(6);
+                for (var i=0;i < marks.length;i++) {
+                    var questiontype = ("questiontype" + (i)).toString();
+                    if (data[questiontype] != null) {
+                        marks[i] = data[questiontype];
+                    }
+                }
+                $("  <div class='service-message J-message-wraper'> <div class='aside aside-noimg'><span class='time'>"
+                    +timeString+
+                    "</span></div> " +
+                    "<div class='out-content'> <div class='service-tail iconfont icon-chat-left-bottom-white'></div> <div class='service-card J-service-card'> <div class='card-header card-header-blue '> <span class='title'>"
+                    +marks[0]+"子问题列表：</span> </div>"
+                    +"<div class='card-footer'> <h4></h4> <ul class='J-lists-wrap' data-aspm='c38850'>"
+                    + "<li onclick='accurateask(this)'><p>"
+                    +marks[1]+
+                    "</p></li> "
+                    + "<li onclick='accurateask(this)'><p>"
+                    +marks[2]+
+                    "</p></li> "
+                    + "<li onclick='accurateask(this)'><p>"
+                    +marks[3]+
+                    "</p></li> "
+                    + "<li onclick='accurateask(this)'><p>"
+                    +marks[4]+
+                    "</p></li> "
+                    + "<li onclick='accurateask(this)'><p>"
+                    +marks[5]+
+                    "</p></li> </ul> </div> </div></div> </div>").appendTo($("#msgStart"))
+            }
+        })
+    };
+
+    function test() {
+        alert("just a test")
+    }
+
+     function accurate_search(imgcontent) {
+        var time=new Date();
+        var hour=time.getHours();
+        var minu=time.getMinutes();
+        var secend = time.getSeconds();
+        var timeString =hour+":"+minu+":"+secend;
+        var imgdata = imgcontent.innerHTML;
+        $.ajax({
+            url: '/accurate_search/',
+            type: "POST",
+            data: {accurate_Question: imgdata},
+            success: function (data) {
+                data = JSON.parse(data);
+                var marks = new Array(2);
+                for (var i=0;i < marks.length;i++) {
+                    var answer = ("answer" + (i)).toString();
+                    if (data[answer] != null) {
+                        marks[i] = data[answer];
+                    }
+                }
+                $("  <div class='service-message J-message-wraper'> <div class='aside aside-noimg'><span class='time'>"
+                    +timeString+
+                    "</span></div><div> <div class='out-content'> <div class='service-tail iconfont icon-chat-left-bottom-white'></div> <div class='service-card J-service-card'> <div class='card-body'>问："
+                    +marks[0]+
+                    "<br>答："
+                    +marks[1]+
+                    "<br> </div> </div> </div> </div>").appendTo($("#msgStart"))
+            }
+        })
+    };
+    function mayask(e){
+        var mask = e.children;
+        beginImg(mask[0]);
+        console.log(mask[0].innerHTML);
+    };
+
+    function accurateask(e){
+        var mask = e.children;
+        accurate_search(mask[0]);
+        console.log(mask[0].innerHTML);
+    };
+
+
+    //**************网址加载，显示类别问题 start*******************//
+    window.onload=function () {
+        var time=new Date();
+        var hour=time.getHours();
+        var minu=time.getMinutes();
+        var secend = time.getSeconds();
+        var timeString =hour+":"+minu+":"+secend;
+
+        document.getElementById("time1").innerHTML = timeString;
+        document.getElementById("time2").innerHTML = timeString;
+
+        $.ajax({
+            url:'/usermayask/',
+            type:"POST",
+            success:function (data) {
+                data = JSON.parse(data);
+                var marks = $(".J-lists-wrap").find("p");
+                var count = $(".J-lists-wrap").find("small");
+
+                for(var i=0;i<marks.length;i++){
+                    var maysak_jsonkey = ("mayask"+(i)).toString();
+                  //  var count_jsonkey = ("count"+(i)).toString();
+                    if(data[maysak_jsonkey]!=null) {
+                        marks[i].innerHTML = data[maysak_jsonkey];
+                  //      count[i].innerHTML = data[count_jsonkey];
+                    }
+                }
+            }
+        });
+    }
+    //**************网址加载，显示类别问题 end*******************//
+
+    //注意！！下面这玩意儿是实现问题气泡显示的
+    function gulugulu(question) {
+        var time=new Date();
+        var hour=time.getHours();
+        var minu=time.getMinutes();
+        var secend = time.getSeconds();
+        var timeString =hour+":"+minu+":"+secend;
+        var question = this.question;
+
+        {#window.alert(question.value)#}
+        $.ajax({
+            url: '/gulugulu/',
+            type: "POST",
+            data: {question: question.value},
+            charset: "UTF-8",
+            async:false,
+            success: function (data) {
+                data = JSON.parse(data);
+
+                $("  <div class='service-message J-message-wraper'> <div class='aside aside-noimg'><span class='time'>"
+                    +timeString+
+                    "</span></div> " +
+                    "<div class='out-content'> <div class='service-tail iconfont icon-chat-left-bottom-white'></div> <div class='service-card J-service-card'> <div class='card-header card-header-blue '> <span class='title'>"
+                    +"您提出的问题：" +question.value+"</div>").appendTo($("#msgStart"))
+            }
+        })
+
+
+    };
+    //注意！！下面这玩意儿是实现回答气泡显示的
+    function guluanswer() {
+        var time=new Date();
+        var hour=time.getHours();
+        var minu=time.getMinutes();
+        var secend = time.getSeconds();
+        var timeString =hour+":"+minu+":"+secend;
+        var answer
+        $.ajax({
+            url: '/guluanswer/',
+            type: "POST",
+
+            success: function (data) {
+                answer = data;
+
+                $("  <div class='service-message J-message-wraper'> <div class='aside aside-noimg'><span class='time'>"
+                    +timeString+
+                    "</span></div> " +
+                    "<div class='out-content'> <div class='service-tail iconfont icon-chat-left-bottom-white'></div> <div class='service-card J-service-card'> <div class='card-header card-header-blue '> <span class='title'>"
+                    +decodeUnicode(answer)+"</div>").appendTo($("#msgStart"))
+            }
+        })
+    };
+    function decodeUnicode(str) {
+    str = str.replace(/\\/g, "%");
+    var StringFirst = str;
+    var splitFirst = StringFirst.split('%n');
+    var splitSecond = splitFirst.join('');
+    var splitThird = splitSecond.split('%"');
+    var ResultString = splitThird.join('"');
+    return unescape(ResultString);
+}
+</script>
+
+
+</body></html>
+
+
+
+

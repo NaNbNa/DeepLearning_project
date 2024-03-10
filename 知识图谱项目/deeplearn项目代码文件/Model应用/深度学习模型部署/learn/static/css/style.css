@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    font-size: 1.2em;
+    font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Noto Sans CJK SC, WenQuanYi Micro Hei, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color:#333
+}
+.container {
+    height:auto !important;
+    padding-left: 10px;
+    padding-right:10px
+}
+
+.main {
+    margin-top:20px
+}
+.row {
+    width: 100%;
+    max-width: 1260px;
+    min-width: 755px;
+    margin: 0 auto;
+    overflow:hidden
+}
+
+.learn-col-md2{
+   margin-right: 1%;
+    float: left;
+    width: 14%;
+    display: block;
+    box-sizing: border-box;
+    border:1px solid #eee
+}
+.left-column{
+width :11%;
+}
+.site-fix {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 666;
+    min-height: 0;
+    overflow: hidden;
+    background-color: #fff;
+    border-color: #eee;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    overflow-x:hidden
+}
+
+.tab {
+    padding-left: 4px;
+    font-weight: bold;
+    display: block;
+    font-size: 1。2em;
+    line-height: 1.5em;
+    font-family: proxima-nova, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #64854c;
+    text-shadow: 0 1px 0 rgba(0, 0, 255, .15);
+    border: 1px solid rgba(0, 0, 0, .1);
+
+}
+.fa {
+    white-space: nowrap;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing:grayscale
+}
+a,span{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+.design {
+    padding:1px;
+    margin: 0;
+    overflow:hidden
+}
+.design a {
+    line-height: 24px;
+    background-color: #f6f4f0;
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid #efefef;
+    color: #000;
+    font-size:17px
+}
+
+.middle-column{
+    height:auto !important;
+    width: 86%;
+    box-sizing: border-box;
+    float:left
+}
+.article-body{
+    background: #fff;
+    margin:%200;
+    border:%201px%20solid%20#efefef;
+    border-bottom:%200;
+    margin-bottom:%2020px;
+}
+.article-body .blank{
+line-height: 24px;
+    overflow: hidden;
+    padding: 10px 30px 10px 30px;
+    background: #fbfbfb;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+    color: #8590a6;
+    font-size: 15px;
+    border: 1px solid #e7eaf1;
+    box-shadow: 0 1px 3px rgba(0, 37, 55, .05);
+    box-sizing:border-box
+}
+.article-body h2 {
+    font-size: 1.8em;
+    margin: 2px 0;
+    line-height:1.8em
+}
+
+
+pre {
+    margin: 15px auto;
+    font: 15px/15px Menlo,Monaco,Consolas,"Andale Mono","lucida console","Courier New",monospace;
+    border: 1px solid #ddd;
+    border-left-width: 5px;
+    background: #fbfbfb url(/images/codecolorer_bg.gif) top;
+    padding: 10px 10px;
+    overflow: auto;
+    word-break: normal !important;
+    word-wrap: normal !important;
+    white-space: pre !important;
+}
+pre.prettyprint {
+padding: 10px 10px;
+}
+.article-body p {
+    word-wrap: break-word;
+    word-break: break-all;
+    font-size: 13px;
+    line-height: 2em;
+    font-family:Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Noto Sans CJK SC, WenQuanYi Micro Hei, Arial, sans-serif
+}
+.pln{
+color: #000;
+}

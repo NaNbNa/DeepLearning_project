@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/all.min.css">
+    <title>LSTM</title>
+</head>
+<body>
+  <div class="container main">
+      <div class="row">
+          <div class="learn-col-md2">
+              <div class="left-column site-fix">
+                  <div class="tab" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                      <i class="fa">
+                          ::
+                      </i>
+                      <span>LSTM-项目</span>
+                  </div>
+                  <div class="sidebar-box gallery-list">
+                      <div class="design" id="left-column">
+                          <a target="_top" title="LSTM-introduce" href="/" >LSTM-introduce</a>
+                          <a target="_top" title="LSTM-build" href="/build" >LSTM-build</a>
+                          <a target="_top" title="LSTM-test" href="/test" style="background-color: rgb(0, 0, 525);font-weight: bold;color: rgb(255, 255, 255);">LSTM-test</a>
+                          <a target="_top" title="LSTM-use" href="/use">LSTM-use</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col middle-column">
+              <div class="article-body">
+                  <div  class="blank"></div>
+                  <hr>
+                  <h2>lstm-model-test</h2>
+                  <pre class="prettyprint-test">
+                      <span class="pln">RMSE：衡量预测值与真实值之间的离散程度</span>
+                      <hr>
+                      <span class="pln">MAPE：衡量预测值偏差的大小，越小表示模型预测效果越好</span>
+                  </pre>
+                  <hr>
+                  <hr>
+                  <h6>所需要测试的模型路径在build网页设置</h6>
+                  <h6>使用训练好的模型和设定好的测试集对模型进行预测，并画图</h6>
+                  <h6>测试集：数据集中未拿来训练的部分，规格和训练所用的数据集一致</h6>
+                  <hr>
+                  <hr>
+                  <button id="testBtn" class="form-control btn-primary">Test Model</button>
+                  <div id="test-img-container"></div>
+                  <div id="RMSE"></div>
+                  <div id="MAPE"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+<script src="../static/js/jquery-3.5.1.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/custom.js"></script>
+<script src="../static/js/socket.io.js"></script>
+<script src="../static/js/layer/layer.js"></script>
+</html>

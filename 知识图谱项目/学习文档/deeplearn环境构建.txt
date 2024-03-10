@@ -1,0 +1,27 @@
+深度学习配置流程
+1.安装anaconda(官网)
+2.以下是命令行
+conda create -n keras python==3.9     (或者其他版本)  这一行命令的keras是名字,可以变.
+接下来很重要
+第一先用conda activate /Library/anaconda3/envs/keras 这一行命令到keras(和上面命名一致)目录下才可以进行下列操作,不然都不算安装成功
+pip install temsorflow==2.6.0
+pip install keras==2.6.0
+pip install bumpy==1.20.3
+pip install pandas
+pip install matplotlib
+pip install sklearn
+
+最后检查是否安装完成:
+conda list
+
+
+tensorflow出现问题的解决办法:
+先卸载
+安装依赖项
+pip install -U --user pip numpy wheel
+pip install -U --user keras_preprocessing --no-deps
+brew install bazel
+git clone https://github.com/tensorflow/tensorflow.git
+cd tensorflow
+./configure
+bazel build [--config=option] //tensorflow/tools/pip_package:build_pip_package
